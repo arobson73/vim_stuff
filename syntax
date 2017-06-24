@@ -1,0 +1,9 @@
+type :highlights in terminal to see all possible colors
+then do something like this
+
+syn keyword Statement BookstoreUser
+syn keyword Function Book
+
+the above can be loaded from vim command line like this 
+
+source filename
