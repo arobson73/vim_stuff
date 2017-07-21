@@ -1,0 +1,30 @@
+" ~/.vimrc
+"
+
+" no vi compat
+set nocompatible
+set guifont=Inconsolata\ 14
+colorscheme torte
+
+
+" filetype func off
+filetype off
+
+" initialize vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+" start- all plugins below
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'godlygeek/tabular'
+Plugin 'chrisbra/csv.vim'
+
+" stop - all plugins above
+call vundle#end()
+
+" filetype func on
+filetype plugin indent on
