@@ -30,6 +30,10 @@ Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plugin 'vim-airline/vim-airline'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'leshill/vim-json'
 "errp<TAB> after err code, also fn<TAB> start typing variable in string 
 "also json<TAB> in struct
 "fn -> fmt.Println()
@@ -52,8 +56,8 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-let g:go_metalinter_deadline = "5s"
+"let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+"let g:go_metalinter_deadline = "5s"
 let g:go_def_mode = 'godef'
 "shows :GoInfo whereever the cursor moves to
 let g:go_auto_type_info = 1
@@ -72,6 +76,12 @@ let g:buffergator_viewport_split_policy = 'R'
 
 " I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
+
+"flow for javascript
+let g:javascript_plugin_flow = 1
+"for jsx files
+let g:jsx_ext_required = 0
+
 
 " Looper buffers
 "let g:buffergator_mru_cycle_loop = 1
@@ -122,6 +132,9 @@ autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
+"javascipt indentation
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+
 
 "tabbing
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 
@@ -143,3 +156,4 @@ autocmd FileType go nmap <Leader>i <Plug>(go-info)
 ":GoSameIds - put cursor on function. it highlights all other place of it
 ":GoReferrers returns references to selected identifier	
 ":GoDescribe similar to above but more detail
+
