@@ -137,6 +137,7 @@ autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 "javascipt indentation
 autocmd Filetype typescript setlocal ts=4 sts=4 sw=4
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
 
 "tabbing
