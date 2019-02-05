@@ -1,0 +1,4 @@
+#youcomplete me setup for ubuntu
+
+sudo apt install vim-youcompleteme
+vim-addon-manager install youcompleteme
