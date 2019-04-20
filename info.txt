@@ -2,3 +2,14 @@
 
 sudo apt install vim-youcompleteme
 vim-addon-manager install youcompleteme
+
+#ctags just run this in relevant directory
+ctags -R --exclude=someDir --exclude=someOtherDir
+
+#in vim CTRL-] will navigate to definition and CTRL-T goes back
+:tn will go to next
+:tp will go back to previous
+
+#cscope run this in the directory
+cscope -Rb
+
