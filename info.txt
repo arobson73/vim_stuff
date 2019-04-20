@@ -12,4 +12,9 @@ ctags -R --exclude=someDir --exclude=someOtherDir
 
 #cscope run this in the directory
 cscope -Rb
+#note to build the cscope.files do this
+find ./ -type f \( -iname \*.cpp -o -iname \*.h \) >cscope.files
+#note in vim to load the files from doing 
+ cscope -b -q -k -R
+ :cs add cscope.out
 
