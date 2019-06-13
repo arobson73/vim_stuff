@@ -17,4 +17,9 @@ find ./ -type f \( -iname \*.cpp -o -iname \*.h \) >cscope.files
 #note in vim to load the files from doing 
  cscope -b -q -k -R
  :cs add cscope.out
+ 
+ #show whitespace
+ set list
+ #dont show whitespace
+ set nolist
 
