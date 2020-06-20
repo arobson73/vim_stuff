@@ -23,3 +23,16 @@ find ./ -type f \( -iname \*.cpp -o -iname \*.h \) >cscope.files
  #dont show whitespace
  set nolist
 
+#to get YCM setup. 
+make sure clang installs clangd as clangd, not clangd-10.
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+make sure to go to directory where ycm is installed by vim
+do
+python build.py --clang-completer
+
+install the 
+pip install compiledb and ctags
+
+at root of project do
+
+compiledb -n make
