@@ -36,3 +36,6 @@ pip install compiledb and ctags
 at root of project do
 
 compiledb -n make
+
+#open file and split
+:sp path/name
